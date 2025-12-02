@@ -1,8 +1,8 @@
 <?php
 
-namespace Encore\Admin\LogViewer;
+namespace Ladmin\LogViewer;
 
-use Encore\Admin\Admin;
+use Ladmin\Admin;
 
 trait BootExtension
 {

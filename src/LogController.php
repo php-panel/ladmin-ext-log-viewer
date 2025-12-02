@@ -1,9 +1,9 @@
 <?php
 
-namespace Encore\Admin\LogViewer;
+namespace Ladmin\LogViewer;
 
-use Encore\Admin\Facades\Admin;
-use Encore\Admin\Layout\Content;
+use Ladmin\Facades\Admin;
+use Ladmin\Layout\Content;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
@@ -55,6 +55,6 @@ class LogController extends Controller
             $bytes /= 1024;
         }
 
-        return round($bytes, 2).' '.$units[$i];
+        return round($bytes, 2) . ' ' . $units[$i];
     }
 }

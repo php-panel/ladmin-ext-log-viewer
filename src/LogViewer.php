@@ -1,8 +1,8 @@
 <?php
 
-namespace Encore\Admin\LogViewer;
+namespace Ladmin\LogViewer;
 
-use Encore\Admin\Extension;
+use Ladmin\Extension;
 
 /**
  * Class LogViewer.
@@ -136,7 +136,8 @@ class LogViewer extends Extension
         }
 
         return route('log-viewer-file', [
-            'file' => $this->file, 'offset' => $this->pageOffset['end'],
+            'file' => $this->file,
+            'offset' => $this->pageOffset['end'],
         ]);
     }
 
@@ -152,7 +153,8 @@ class LogViewer extends Extension
         }
 
         return route('log-viewer-file', [
-            'file' => $this->file, 'offset' => -$this->pageOffset['start'],
+            'file' => $this->file,
+            'offset' => -$this->pageOffset['start'],
         ]);
     }
 
@@ -195,7 +197,7 @@ class LogViewer extends Extension
             $this->pageOffset['start'] = ftell($f);
 
             while (!feof($f) && $lines >= 0) {
-                $output = $output.($chunk = fread($f, $buffer));
+                $output = $output . ($chunk = fread($f, $buffer));
                 $lines -= substr_count($chunk, "\n[20");
             }
 
@@ -217,7 +219,7 @@ class LogViewer extends Extension
             while (ftell($f) > 0 && $lines >= 0) {
                 $offset = min(ftell($f), $buffer);
                 fseek($f, -$offset, SEEK_CUR);
-                $output = ($chunk = fread($f, $offset)).$output;
+                $output = ($chunk = fread($f, $offset)) . $output;
                 fseek($f, -mb_strlen($chunk, '8bit'), SEEK_CUR);
                 $lines -= substr_count($chunk, "\n[20");
             }
