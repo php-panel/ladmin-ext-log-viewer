@@ -1,5 +1,5 @@
 {
-    "name": "php-panel/ladmin-log-viewer",
+    "name": "php-panel/ladmin-ext-log-viewer",
     "description": "Log viewer for laravel",
     "type": "library",
     "keywords": [
@@ -7,7 +7,7 @@
         "log",
         "viewer"
     ],
-    "homepage": "https://github.com/php-panel/ladmin-log-viewer",
+    "homepage": "https://github.com/php-panel/ladmin-ext-log-viewer",
     "license": "MIT",
     "authors": [
         {
